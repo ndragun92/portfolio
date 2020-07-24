@@ -1,0 +1,56 @@
+:root {
+  --dark-primary-color: #0f0e1a;
+  --dark-primary-color-rgb: 245, 45, 10;
+  --dark-secondary-color: #27293d;
+  --dark-secondary-color-rgb: 39, 41, 61;
+  --light-primary-color: #ffffff;
+  --light-primary-color-rgb: 255, 255, 255;
+  --light-secondary-color: #f1f2f7;
+  --light-secondary-color-rgb: 241, 242, 247;
+  --dark-text-primary-color: #0f0e1a;
+  --dark-text-primary-color-rgb: 245, 45, 10;
+  --dark-text-secondary-color: #71717a;
+  --light-text-primary-color: #ffffff;
+  --light-text-secondary-color: #b1b1b5;
+  --dark-border-primary-color: #424351;
+  --active-color-primary: #d9ac6c;
+  --active-color-primary-rgb: 35, 50, 85;
+  --active-color-secondary: #248afd;
+  --active-color-secondary-rgb: 36, 138, 253;
+  --error-color: #ff4747;
+  --error-color-rgb: 255, 71, 71;
+  --success-color: #71c016;
+  --success-color-rgb: 113, 192, 22;
+  --warning-color: #ffc100;
+  --warning-color-rgb: 255, 193, 0;
+  --info-color: #248afd;
+  --info-color-rgb: 35, 138, 253;
+  --transition: 0.2s;
+  --radius: 3px;
+  --box-shadow-dropdown: 0px 12px 20px 0px rgba(0,0,0,0.2);
+  --box-shadow-box: 0px 6px 10px 0px rgba(0,0,0,0.05);
+  --always-light: #ffffff;
+  --always-dark: #0f0e1a;
+}
+
+.theme-light {
+  --dark-primary-color: #f1f2f7;
+  --dark-primary-color-rgb: 241, 242, 247;
+  --dark-secondary-color: #ffffff;
+  --dark-secondary-color-rgb: 255, 255, 255;
+  --light-primary-color: #0f0e1a;
+  --light-primary-color-rgb: 245, 45, 10;
+  --light-secondary-color: #27293d;
+  --light-secondary-color-rgb: 39, 41, 61;
+  --dark-text-primary-color: #ffffff;
+  --dark-text-secondary-color: #f1f2f7;
+  --light-text-primary-color: #0f0e1a;
+  --light-text-secondary-color: #27293d;
+  --dark-border-primary-color: #dadada;
+  --active-color-primary: #248afd;
+  --active-color-primary-rgb: 36, 138, 253;
+  --active-color-secondary: #d9ac6c;
+  --active-color-secondary-rgb: 35, 50, 85;
+  --success-color: #579214;
+  --success-color-rgb: 87, 146, 20;
+}
