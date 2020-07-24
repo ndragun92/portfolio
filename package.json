@@ -5,9 +5,7 @@
   "scripts": {
     "dev": "nuxt",
     "build": "nuxt build",
-    "build:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build",
-    "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt build && nuxt export",
-    "generate": "nuxt build && nuxt export",
+    "generate": "nuxt build --target static && nuxt export",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
     "start": "nuxt start",
     "export": "nuxt export",
@@ -31,6 +29,7 @@
     "eslint": "^7.2.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "node-sass": "^4.14.1",
+    "push-dir": "^0.4.1",
     "sass-loader": "^9.0.2"
   }
 }
