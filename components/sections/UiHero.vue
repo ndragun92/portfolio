@@ -63,7 +63,7 @@
     clip-path: polygon(100% 0%, 100% 90%, 50% 98%, 50% 98%, 0 90%, 0 0);
     &:before {
       content: '';
-      background-image: url("/images/sections/hero3.svg");
+      background-image: url("~static/images/sections/hero3.svg");
       background-repeat: no-repeat;
       background-size: auto;
       background-position: bottom center;
