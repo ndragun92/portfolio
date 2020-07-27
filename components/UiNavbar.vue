@@ -1,13 +1,14 @@
 <template>
   <nav class="ui-navbar">
-    <div class="ui-navbar__container">
-      <div class="ui-navbar__logo">
+    <div class="g-container ui-navbar__container">
+      <div class="ui-navbar__logo" @click="$router.push('/')">
+        <img src="~static/images/avatar.png" alt="">
         <span>Nemanja <strong>Dragun</strong></span>
       </div>
       <ul class="ui-navbar__links">
         <li v-for="link in links" :key="link.href">
           <nuxt-link :to="link.href">
-            {{ link.name }}
+            <i v-if="link.icon" :class="[link.icon]" />{{ link.name }}
           </nuxt-link>
         </li>
       </ul>
@@ -21,7 +22,8 @@ export default {
     links: [
       {
         name: 'Home',
-        href: '/'
+        href: '/',
+        icon: 'fas fa-home'
       },
       {
         name: 'Recent work',
@@ -48,10 +50,6 @@ export default {
     z-index: $z_index-fixed;
     height: 60px;
     &__container {
-      width: 100%;
-      max-width: 1200px;
-      padding: 0 20px;
-      margin: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -63,6 +61,17 @@ export default {
       font-size: 18px;
       font-weight: 400;
       color: var(--light-text-primary-color);
+      display: flex;
+      align-items: center;
+      img {
+        $size: 35px;
+        width: $size;
+        height: $size;
+        display: block;
+      }
+      span {
+        margin-left: 10px;
+      }
       strong {
         color: var(--active-color-primary);
       }
@@ -82,6 +91,9 @@ export default {
           color: var(--light-text-primary-color);
           text-decoration: none;
           text-transform: uppercase;
+          i {
+            margin-right: 5px;
+          }
           &:hover {
             -webkit-mask-image: linear-gradient(-75deg,rgba(0,0,0,.6) 30%,#000 50%,rgba(0,0,0,.6) 70%);
             -webkit-mask-size: 200%;

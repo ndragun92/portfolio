@@ -1,35 +1,120 @@
 <template>
-  <div>
-    Why do i love to work as developer?
-    <p>
-      <strong>1. Be rewarded</strong>
-      Thing that I love about this job is that I am learning something new everyday.
-      Each day I meet new problems which I have to solve.
-      Each day brings something new, something exciting.
-      Working as developer is my passion. I love to spend time coding and reading articles!
-      In the end all the effort that I put working is already or will be rewarded!
-    </p>
-    <p>
-      <strong>2. Ability to work alone or to become part of something bigger</strong>
-      It is totally up to me! I can work on projects alone if I want that or I can
-      be part of something bigger. I have opportunity to meet a lot of great people,
-      great developers. Being a part of something bigger is more challenging but I can get only
-      benefits from that, I will grow faster, learn more, share my own experience with others!
-    </p>
-    <p>
-      <strong>3. Ability to work remotely or from office</strong>
-      In this job you have opportunity to work fully/partly remote or even from office.
-      If you feel like you are more productive from working in office you can do that as well!
-      I personally like to organize my own day. I am more productive when I work from home.
-      I always give my best! Also once I am done with work i don't have to drive from office to home and lose that time on road. I rather spend that time with my family.
-    </p>
-    <p>
-      <strong>4. How do I try to stay successful?</strong>
-      In order to be successful I am giving my best in everything that I do!
-      In this job I have to be up to date with everything.
-      Things that I am using/coding today might be different tomorrow.
-      Community is growing, a lot of new things shows up on daily basis.
-      By reading articles and learning new stuff I can improve my skills and make my code even better!
-    </p>
-  </div>
+  <section class="g-container ui-work-as-developer">
+    <h2 class="h2">
+      Why do i love to work as developer?
+    </h2>
+    <div class="heading__separator" />
+    <div class="ui-work-as-developer__cards">
+      <div v-for="(item, index) in list" :key="index" class="ui-work-as-developer__card">
+        <i :class="[item.icon]" />
+        <h3 class="h3">
+          {{ item.name }}
+        </h3>
+        <p class="p">
+          {{ item.description }}
+        </p>
+      </div>
+    </div>
+  </section>
 </template>
+
+<script>
+export default {
+  data: () => ({
+    list: [
+      {
+        name: 'Be rewarded',
+        description: 'Thing that I love about this job is that I am learning something new everyday.\n' +
+            '      Each day I meet new problems which I have to solve.\n' +
+            '      Each day brings something new, something exciting.\n' +
+            '      Working as developer is my passion. I love to spend time coding and reading articles!\n' +
+            '      In the end all the effort that I put working is already or will be rewarded!',
+        icon: 'fas fa-gift'
+      },
+      {
+        name: 'Work place',
+        description: 'It is totally up to me! I can work on projects alone if I want that or I can\n' +
+            '      be part of something bigger. I have opportunity to meet a lot of great people,\n' +
+            '      great developers. Being a part of something bigger is more challenging but I can get only\n' +
+            '      benefits from that, I will grow faster, learn more, share my own experience with others!',
+        icon: 'fas fa-home'
+      },
+      {
+        name: 'Work remotely or from office',
+        description: 'In this job you have opportunity to work fully/partly remote or even from office.\n' +
+          '      If you feel like you are more productive from working in office you can do that as well!\n' +
+          '      I personally like to organize my own day. I am more productive when I work from home.\n' +
+          '      I always give my best! Also once I am done with work i don\'t have to drive from office to home and lose that time on road.\n' +
+          '      I rather spend that time with my family.',
+        icon: 'fas fa-globe'
+      },
+      {
+        name: 'How am I trying to stay successful?',
+        description: 'In order to be successful I am giving my best in everything that I do!\n' +
+          '      In this job I have to be up to date with everything.\n' +
+          '      Things that I am using/coding today might be different tomorrow.\n' +
+          '      Community is growing, a lot of new things shows up on daily basis.\n' +
+          '      By reading articles and learning new stuff I can improve my skills and make my code even better!',
+        icon: 'fas fa-trophy'
+      }
+    ]
+  })
+}
+</script>
+
+<style lang="scss" scoped>
+  .ui-work-as-developer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &__cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+    &__card {
+      position: relative;
+      overflow: hidden;
+      background-color: var(--light-secondary-color);
+      border: 1px solid var(--light-border-secondary-color);
+      padding: 40px;
+      text-align: center;
+      border-radius: var(--radius);
+      box-shadow: var(--box-shadow-box);
+      i {
+        color: var(--dark-primary-color);
+        position: absolute;
+        top: 5%;
+        left: -5%;
+        font-size: 200px;
+        opacity: 0.05;
+        -webkit-mask-image: linear-gradient(-75deg,rgba(0,0,0,.6) 30%,var(--dark-primary-color) 50%,rgba(0,0,0,.6) 70%);
+        -webkit-mask-size: 200%;
+        -webkit-animation: shine-data 2s infinite;
+        animation: shine-data 2s infinite;
+        @-webkit-keyframes shine-data {
+          0% {
+            -webkit-mask-position: 150%
+          }
+
+          to {
+            -webkit-mask-position: -50%
+          }
+        }
+      }
+      h3, p {
+        position: relative;
+      }
+      h3 {
+        margin: 0 0 20px 0;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+  }
+</style>

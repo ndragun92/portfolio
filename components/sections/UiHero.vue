@@ -16,9 +16,9 @@
     <div class="ui-hero__me">
       <div class="ui-hero__line" />
       <h1>I'm <strong>Nemanja Dragun</strong></h1>
-      <h6>Fullstack <strong>Developer</strong></h6>
+      <h6>Full-stack <strong>Web Developer</strong></h6>
     </div>
-    <div class="ui-hero__bottom-bar">
+    <div class="g-container ui-hero__bottom-bar">
       <div>
         <a href="https://facebook.com">
           <i class="fab fa-facebook-f" />
@@ -114,10 +114,6 @@
     }
     &__bottom-bar {
       position: absolute;
-      width: 100%;
-      max-width: 1200px;
-      padding: 0 20px;
-      margin: auto;
       z-index: $z_index-absolute;
       right: 0;
       bottom: calc(10% + 40px);
