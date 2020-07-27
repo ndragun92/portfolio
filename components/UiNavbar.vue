@@ -7,7 +7,7 @@
       </div>
       <ul class="ui-navbar__links">
         <li v-for="link in links" :key="link.href">
-          <nuxt-link class="ui-navbar__link" :to="link.href">
+          <nuxt-link class="ui-navbar__link" :to="link.href" :class="{'ui-navbar__link--bordered': link.bordered}">
             <i v-if="link.icon" :class="[link.icon]" />{{ link.name }}
           </nuxt-link>
         </li>
@@ -45,7 +45,8 @@ export default {
       },
       {
         name: 'Contact me',
-        href: '/contact'
+        href: '/contact',
+        bordered: true
       }
     ]
   }),
@@ -124,15 +125,16 @@ export default {
       margin: 0;
       li {
         display: inline-block;
-        margin: 0 20px;
+        margin: 0 10px;
         a {
+          padding: 5px 10px;
           cursor: pointer;
           font-size: 16px;
           color: var(--always-text-light-primary);
           text-decoration: none;
           text-transform: uppercase;
           i {
-            margin-right: 5px;
+            margin-right: 10px;
           }
         }
       }
@@ -153,11 +155,11 @@ export default {
           -webkit-mask-position: -50%
         }
       }
+      &--bordered {
+        border: 1px solid var(--active-color-primary);
+      }
       &--theme {
         margin: 0 !important;
-        &:last-child {
-          margin-left: 10px !important;
-        }
         i {
           margin: 0 !important;
         }
