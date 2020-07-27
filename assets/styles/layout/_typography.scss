@@ -7,26 +7,44 @@ body {
 
 .h1 {
   font-size: 36px;
+  @include upToSmallDesktop {
+    font-size: 30px;
+  }
 }
 
 .h2 {
   font-size: 30px;
+  @include upToSmallDesktop {
+    font-size: 24px;
+  }
 }
 
 .h3 {
   font-size: 24px;
+  @include upToSmallDesktop {
+    font-size: 20px;
+  }
 }
 
 .h4 {
+  font-size: 22px;
+  @include upToSmallDesktop {
+    font-size: 18px;
+  }
+}
+
+.h5 {
   font-size: 20px;
+  @include upToSmallDesktop {
+    font-size: 18px;
+  }
 }
 
 .h5 {
   font-size: 18px;
-}
-
-.h5 {
-  font-size: 16px;
+  @include upToSmallDesktop {
+    font-size: 16px;
+  }
 }
 
 .p {

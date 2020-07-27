@@ -69,10 +69,23 @@ export default {
     padding-top: 60px;
     padding-bottom: 100px;
     background-color: var(--light-primary-color);
+    @include upToTablet {
+      padding-top: 40px;
+      padding-bottom: 80px;
+    }
+    @include upToMobile {
+      padding-bottom: 40px;
+    }
     &__cards {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 20px;
+      @include upToTablet {
+        grid-template-columns: 1fr;
+      }
+      @include upToMobile {
+        grid-gap: 10px;
+      }
     }
     &__card {
       position: relative;
@@ -84,6 +97,9 @@ export default {
       border-radius: var(--radius);
       box-shadow: var(--box-shadow-box);
       color: var(--dark-text-primary-color);
+      @include upToTablet {
+        padding: 40px 20px;
+      }
       i {
         color: var(--dark-primary-color);
         position: absolute;
