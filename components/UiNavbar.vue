@@ -44,8 +44,8 @@ export default {
         icon: 'fas fa-home'
       },
       {
-        name: 'Recent work',
-        href: '/recent-work'
+        name: 'Projects',
+        href: '/projects'
       },
       {
         name: 'Tutorials',
