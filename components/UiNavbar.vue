@@ -28,8 +28,8 @@ export default {
         href: '/recent-work'
       },
       {
-        name: 'About me',
-        href: '/about'
+        name: 'Tutorials',
+        href: '/tutorials'
       },
       {
         name: 'Contact me',
@@ -50,6 +50,7 @@ export default {
     &__container {
       width: 100%;
       max-width: 1200px;
+      padding: 0 20px;
       margin: auto;
       display: flex;
       align-items: center;
@@ -64,6 +65,9 @@ export default {
       color: var(--light-text-primary-color);
       strong {
         color: var(--active-color-primary);
+      }
+      @include upToSmallDesktop {
+        background-color: red;
       }
     }
     &__links {

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "nuxt --port 3010",
     "build": "nuxt build",
     "generate": "nuxt build --target static && nuxt export",
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup",
