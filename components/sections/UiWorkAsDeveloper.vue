@@ -80,6 +80,7 @@ export default {
       text-align: center;
       border-radius: var(--radius);
       box-shadow: var(--box-shadow-box);
+      color: var(--dark-text-primary-color);
       i {
         color: var(--dark-primary-color);
         position: absolute;
@@ -116,5 +117,6 @@ export default {
     text-align: center;
     text-transform: uppercase;
     margin: 0;
+    color: var(--dark-text-primary-color);
   }
 </style>
