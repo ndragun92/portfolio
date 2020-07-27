@@ -2,27 +2,60 @@
   <section class="ui-frameworks">
     <div class="g-container">
       <h2 class="h2">
-        Things that i know
+        Things that i know - <button @click="frontend">
+          Frontend
+        </button>
+        <button @click="backend">
+          Backend
+        </button>
+        <button @click="other">
+          Other
+        </button>
       </h2>
       <div class="heading__separator" />
-      <ul class="ui-frameworks__list">
+      <transition-group tag="ul" class="ui-frameworks__list" name="ui-frameworks__list--animation">
         <li
-          v-for="item in ['adonis', 'angular', 'bootstrap', 'feathers',
-                          'css', 'git', 'html', 'intellij', 'js', 'laravel', 'mongodb', 'mysql', 'nuxt', 'photoshop', 'php', 'sass', 'vue', 'vuetify']"
+          v-for="item in list"
           :key="item"
+          class="ui-frameworks__list-item"
+          :class="{ active: selectedList.includes(item) }"
         >
           <img :src="`http://nemanja-portfolio.herokuapp.com/images/frameworks/${item}.jpg`" alt="">
         </li>
-      </ul>
+      </transition-group>
     </div>
   </section>
 </template>
 
 <script>
+import shuffle from 'lodash/shuffle'
+const defaultList = ['adonis', 'angular', 'bootstrap', 'feathers',
+  'css', 'git', 'html', 'intellij', 'js', 'laravel',
+  'mongodb', 'mysql', 'nuxt', 'photoshop', 'php', 'sass',
+  'vue', 'vuetify']
 export default {
   data: () => ({
-    list: []
-  })
+    list: defaultList,
+    selectedList: []
+  }),
+  methods: {
+    frontend () {
+      this.selectedList = ['nuxt', 'vue', 'angular', 'html', 'js', 'sass', 'css', 'bootstrap', 'vuetify']
+      this.list = [...new Set([...this.selectedList, ...this.list])]
+    },
+    backend () {
+      this.selectedList = ['adonis', 'feathers', 'laravel', 'php', 'mysql', 'mongodb']
+      this.list = [...new Set([...this.selectedList, ...this.list])]
+    },
+    other () {
+      this.selectedList = ['git', 'photoshop', 'intellij']
+      this.list = [...new Set([...this.selectedList, ...this.list])]
+    },
+    all () {
+      this.selectedList = []
+      this.list = shuffle(defaultList)
+    }
+  }
 }
 </script>
 
@@ -32,6 +65,7 @@ export default {
     padding-bottom: 60px;
     background-color: var(--light-secondary-color);
     clip-path: polygon(0% 100%, 0% 10%, 50% 0%, 100% 10%, 100% 100%);
+    min-height: 500px;
     @include upToTablet {
       padding-top: 80px;
       padding-bottom: 40px;
@@ -42,6 +76,7 @@ export default {
       clip-path: none
     }
     &__list {
+      position: relative;
       padding: 0;
       list-style: none;
       margin: 0;
@@ -64,6 +99,22 @@ export default {
       img {
         display: block;
         width: 100%;
+      }
+      &--animation {
+        &-enter, &-leave-to {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        &-leave-active {
+          position: absolute;
+        }
+      }
+      &-item {
+        transition: all 1s;
+        border: 2px solid transparent;
+        &.active {
+          border-color: var(--active-color-primary)
+        }
       }
     }
   }
