@@ -52,8 +52,8 @@
 <style lang="scss" scoped>
   .ui-hero {
     position: relative;
-    background-color: var(--dark-primary-color);
-    color: var(--light-text-primary-color);
+    background-color: var(--always-dark-primary);
+    color: var(--always-text-light-primary);
     height: 100vh;
     width: 100%;
     display: flex;
@@ -129,8 +129,8 @@
           a {
             $size: 45px;
             background-color: transparent;
-            border: 2px solid var(--light-primary-color);
-            color: var(--light-primary-color);
+            border: 2px solid var(--always-text-light-primary);
+            color: var(--always-text-light-primary);
             font-size: 16px;
             text-decoration: none;
             display: flex;

@@ -99,7 +99,7 @@ export default {
       margin: 0;
       font-size: 18px;
       font-weight: 400;
-      color: var(--light-text-primary-color);
+      color: var(--always-text-light-primary);
       display: flex;
       align-items: center;
       img {
@@ -128,7 +128,7 @@ export default {
         a {
           cursor: pointer;
           font-size: 16px;
-          color: var(--light-text-primary-color);
+          color: var(--always-text-light-primary);
           text-decoration: none;
           text-transform: uppercase;
           i {

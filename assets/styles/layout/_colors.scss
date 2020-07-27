@@ -30,8 +30,10 @@
   --radius: 3px;
   --box-shadow-dropdown: 0px 12px 20px 0px rgba(0,0,0,0.2);
   --box-shadow-box: 0px 6px 10px 0px rgba(0,0,0,0.05);
-  --always-light: #ffffff;
-  --always-dark: #0f0e1a;
+  --always-light-primary: #ffffff;
+  --always-text-light-primary: #ffffff;
+  --always-dark-primary: #0f0e1a;
+  --always-dark-text-primary: #0f0e1a;
 }
 
 .theme-dark {
@@ -78,4 +80,6 @@
   --active-color-secondary-rgb: 255, 255, 0;
   --success-color: #ffff00;
   --success-color-rgb: 255, 255, 0;
+  --always-text-light-primary: #ffff00;
+  --always-dark-text-primary: #000;
 }
