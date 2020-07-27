@@ -6,6 +6,10 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 
 export default {
   ...routerBase,
+  pageTransition: {
+    enterActiveClass: 'animated slideInDown',
+    leaveActiveClass: 'animated slideOutLeft'
+  },
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode

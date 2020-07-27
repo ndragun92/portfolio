@@ -1,6 +1,11 @@
 <template>
   <nav class="ui-navbar">
-    <div class="g-container ui-navbar__container">
+    <div
+      class="g-container ui-navbar__container"
+      :class="{
+        'ui-navbar__container--transparent': $route.name === 'index'
+      }"
+    >
       <div class="ui-navbar__logo" @click="$router.push('/')">
         <img src="~static/images/avatar.png" alt="">
         <span>Nemanja <strong>Dragun</strong></span>
@@ -83,17 +88,20 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  .ui-navbar {
+  .ui-navbar {;
     top: 0;
     position: absolute;
     width: 100%;
     z-index: $z_index-fixed;
-    height: 60px;
     &__container {
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 80px;
+      background-color: var(--always-dark-primary);
+      &--transparent {
+        background-color: transparent;
+      }
     }
     &__logo {
       text-transform: uppercase;

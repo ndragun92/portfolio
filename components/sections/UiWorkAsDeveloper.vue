@@ -1,18 +1,20 @@
 <template>
-  <section class="g-container ui-work-as-developer">
-    <h2 class="h2">
-      Why do i love to work as developer?
-    </h2>
-    <div class="heading__separator" />
-    <div class="ui-work-as-developer__cards">
-      <div v-for="(item, index) in list" :key="index" class="ui-work-as-developer__card">
-        <i :class="[item.icon]" />
-        <h3 class="h3">
-          {{ item.name }}
-        </h3>
-        <p class="p">
-          {{ item.description }}
-        </p>
+  <section class="ui-work-as-developer">
+    <div class="g-container">
+      <h2 class="h2">
+        Why do i love to work as developer?
+      </h2>
+      <div class="heading__separator" />
+      <div class="ui-work-as-developer__cards">
+        <div v-for="(item, index) in list" :key="index" class="ui-work-as-developer__card">
+          <i :class="[item.icon]" />
+          <h3 class="h3">
+            {{ item.name }}
+          </h3>
+          <p class="p">
+            {{ item.description }}
+          </p>
+        </div>
       </div>
     </div>
   </section>
@@ -66,6 +68,7 @@ export default {
   .ui-work-as-developer {
     padding-top: 60px;
     padding-bottom: 100px;
+    background-color: var(--light-primary-color);
     &__cards {
       display: grid;
       grid-template-columns: repeat(2, 1fr);

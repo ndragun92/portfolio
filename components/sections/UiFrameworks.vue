@@ -1,6 +1,6 @@
 <template>
-  <div class="ui-frameworks">
-    <section class="g-container">
+  <section class="ui-frameworks">
+    <div class="g-container">
       <h2 class="h2">
         Things that i know
       </h2>
@@ -14,8 +14,8 @@
           <img :src="`http://nemanja-portfolio.herokuapp.com/images/frameworks/${item}.jpg`" alt="">
         </li>
       </ul>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>
 
 <script>
