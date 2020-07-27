@@ -64,6 +64,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     '@nuxtjs/pwa',
+    'cookie-universal-nuxt',
     // Doc: https://github.com/nuxt/content
     '@nuxt/content',
     // Doc: https://www.npmjs.com/package/@nuxtjs/style-resources

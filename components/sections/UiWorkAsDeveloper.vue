@@ -65,7 +65,7 @@ export default {
 <style lang="scss" scoped>
   .ui-work-as-developer {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 100px;
     &__cards {
       display: grid;
       grid-template-columns: repeat(2, 1fr);

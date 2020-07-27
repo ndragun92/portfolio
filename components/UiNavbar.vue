@@ -7,9 +7,19 @@
       </div>
       <ul class="ui-navbar__links">
         <li v-for="link in links" :key="link.href">
-          <nuxt-link :to="link.href">
+          <nuxt-link class="ui-navbar__link" :to="link.href">
             <i v-if="link.icon" :class="[link.icon]" />{{ link.name }}
           </nuxt-link>
+        </li>
+        <li class="ui-navbar__link--theme">
+          <a role="button" @click="toggleTheme()"><i
+            class="fas"
+            :class="themeToChose === 'dark' ? 'fa-moon' :
+              'fa-sun'"
+          /></a>
+        </li>
+        <li class="ui-navbar__link--theme">
+          <a role="button" @click="accessibilityTheme()"><i class="fas fa-universal-access" /></a>
         </li>
       </ul>
     </div>
@@ -38,7 +48,36 @@ export default {
         href: '/contact'
       }
     ]
-  })
+  }),
+  computed: {
+    themeToChose () {
+      return this.$store.state.theme.palette === 'light' ? 'dark' : 'light'
+    },
+    themeToDelete () {
+      return this.$store.state.theme.palette !== 'light' ? 'dark' : 'light'
+    }
+  },
+  async mounted () {
+    if (this.$cookies.get('theme')) {
+      await this.$store.commit('theme/SET_THEME', this.$cookies.get('theme'))
+      this.selectTheme()
+    }
+  },
+  methods: {
+    async toggleTheme () {
+      await this.$store.commit('theme/SET_THEME', this.themeToChose)
+      this.selectTheme()
+    },
+    selectTheme () {
+      document.documentElement.classList.remove(`theme-${this.themeToChose}`)
+      document.documentElement.classList.remove('theme-accessibility')
+      document.documentElement.classList.add(`theme-${this.themeToDelete}`)
+    },
+    accessibilityTheme () {
+      document.documentElement.classList.remove(`theme-${this.themeToChose}`)
+      document.documentElement.classList.add('theme-accessibility')
+    }
+  }
 }
 </script>
 
@@ -87,6 +126,7 @@ export default {
         display: inline-block;
         margin: 0 20px;
         a {
+          cursor: pointer;
           font-size: 16px;
           color: var(--light-text-primary-color);
           text-decoration: none;
@@ -94,23 +134,35 @@ export default {
           i {
             margin-right: 5px;
           }
-          &:hover {
-            -webkit-mask-image: linear-gradient(-75deg,rgba(0,0,0,.6) 30%,#000 50%,rgba(0,0,0,.6) 70%);
-            -webkit-mask-size: 200%;
-            -webkit-animation: shine-data 2s infinite;
-            animation: shine-data 2s infinite
-          }
-          @-webkit-keyframes shine-data {
-            0% {
-              -webkit-mask-position: 150%
-            }
-
-            to {
-              -webkit-mask-position: -50%
-            }
-          }
         }
       }
     }
+    &__link {
+      &:hover {
+        -webkit-mask-image: linear-gradient(-75deg,rgba(0,0,0,.6) 30%,#000 50%,rgba(0,0,0,.6) 70%);
+        -webkit-mask-size: 200%;
+        -webkit-animation: shine-data 2s infinite;
+        animation: shine-data 2s infinite
+      }
+      @-webkit-keyframes shine-data {
+        0% {
+          -webkit-mask-position: 150%
+        }
+
+        to {
+          -webkit-mask-position: -50%
+        }
+      }
+      &--theme {
+        margin: 0 !important;
+        &:last-child {
+          margin-left: 10px !important;
+        }
+        i {
+          margin: 0 !important;
+        }
+      }
+    }
+
   }
 </style>

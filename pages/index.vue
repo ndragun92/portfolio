@@ -2,6 +2,6 @@
   <div>
     <ui-hero />
     <ui-work-as-developer />
-    Content
+    <ui-frameworks />
   </div>
 </template>
