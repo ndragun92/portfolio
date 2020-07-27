@@ -126,6 +126,9 @@ export default {
       }
       span {
         margin-left: 10px;
+        @include upToMobile {
+          display: none;
+        }
       }
       strong {
         color: var(--active-color-primary);

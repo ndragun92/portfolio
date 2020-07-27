@@ -59,8 +59,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    /*clip-path: polygon(100% 0%, 98% 90%, 50% 98%, 50% 98%, 2% 90%, 0 0);*/
     clip-path: polygon(100% 0%, 100% 90%, 50% 98%, 50% 98%, 0 90%, 0 0);
+    @media (max-height: 650px) {
+      height: 100vh;
+    }
+    @include upToMobile {
+      margin-top: -70px;
+      max-height: 650px;
+    }
     &:before {
       content: '';
       background-image: url("~static/images/sections/hero3.svg");
@@ -94,6 +100,9 @@
       display: flex;
       flex-direction: column;
       pointer-events: none;
+      @media (max-height: 650px) {
+        margin-top: -70px;
+      }
       h1 {
         text-align: center;
         text-transform: uppercase;
@@ -104,6 +113,12 @@
         strong {
           color: var(--active-color-primary);
         }
+        @include upToMobile {
+          font-size: 32px;
+        }
+        @include smallMobile {
+          font-size: 24px;
+        }
       }
       h6 {
         display: inline-block;
@@ -112,6 +127,9 @@
         margin: 0 0 0 auto;
         font-size: 14px;
         font-weight: 400;
+        @include smallMobile {
+          font-size: 12px;
+        }
       }
     }
     &__bottom-bar {
@@ -124,10 +142,23 @@
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 10px;
       align-items: center;
+      grid-template-areas: 'social scrollDown git';
+      @media (max-height: 650px) {
+        bottom: -5px;
+      }
+      @include upToSmallDesktop {
+        grid-template-columns: 1fr;
+        grid-template-areas: 'git' 'social' 'scrollDown';
+        grid-gap: 20px;
+      }
       & > div {
         &:nth-child(1) {
+          grid-area: social;
           display: flex;
           align-items: center;
+          @include upToSmallDesktop {
+            justify-self: center;
+          }
           a {
             $size: 45px;
             background-color: transparent;
@@ -142,7 +173,13 @@
             height: $size;
             border-radius: 100%;
             margin: 0 10px;
-            transition: 0.2s linear;
+            transition: var(--transition) linear;
+            @include upToSmallDesktop {
+              $size: 40px;
+              width: $size;
+              height: $size;
+              font-size: 14px;
+            }
             &:first-child {
               margin-left: 0;
             }
@@ -158,8 +195,12 @@
           }
         }
         &:nth-child(2) {
+          grid-area: scrollDown;
           justify-self: center;
           text-align: center;
+          @include upToSmallDesktop {
+            justify-self: center;
+          }
           i {
             font-size: 18px;
           }
@@ -170,7 +211,11 @@
           }
         }
         &:nth-child(3) {
+          grid-area: git;
           justify-self: flex-end;
+          @include upToSmallDesktop {
+            justify-self: center;
+          }
           i {
             vertical-align: middle;
             font-size: 20px;
