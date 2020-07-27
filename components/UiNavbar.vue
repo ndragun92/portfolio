@@ -26,6 +26,9 @@
         <li class="ui-navbar__link--theme">
           <a role="button" @click="accessibilityTheme()"><i class="fas fa-universal-access" /></a>
         </li>
+        <li class="ui-navbar__link--hamburger">
+          <a role="button" @click="toggleMenu()"><i class="fas fa-bars" /></a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -82,6 +85,9 @@ export default {
     accessibilityTheme () {
       document.documentElement.classList.remove(`theme-${this.themeToChose}`)
       document.documentElement.classList.add('theme-accessibility')
+    },
+    toggleMenu () {
+      console.log('toggle menu')
     }
   }
 }
@@ -93,6 +99,7 @@ export default {
     position: absolute;
     width: 100%;
     z-index: $z_index-fixed;
+    user-select: none;
     &__container {
       display: flex;
       align-items: center;
@@ -123,9 +130,6 @@ export default {
       strong {
         color: var(--active-color-primary);
       }
-      @include upToSmallDesktop {
-        background-color: red;
-      }
     }
     &__links {
       list-style: none;
@@ -148,6 +152,9 @@ export default {
       }
     }
     &__link {
+      @include upToSmallDesktop {
+        display: none;
+      }
       &:hover {
         -webkit-mask-image: linear-gradient(-75deg,rgba(0,0,0,.6) 30%,#000 50%,rgba(0,0,0,.6) 70%);
         -webkit-mask-size: 200%;
@@ -170,6 +177,16 @@ export default {
         margin: 0 !important;
         i {
           margin: 0 !important;
+        }
+      }
+      &--hamburger {
+        display: none !important;
+        margin-right: 0 !important;
+        i {
+          margin: 0 !important;
+        }
+        @include upToSmallDesktop {
+          display: inline-block !important;
         }
       }
     }

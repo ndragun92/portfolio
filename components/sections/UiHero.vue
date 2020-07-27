@@ -90,10 +90,12 @@
       border-bottom: 3px solid var(--active-color-primary);
     }
     &__me {
+      padding: 0 20px;
       display: flex;
       flex-direction: column;
       pointer-events: none;
       h1 {
+        text-align: center;
         text-transform: uppercase;
         letter-spacing: 1px;
         margin: 0 0 5px 0;
