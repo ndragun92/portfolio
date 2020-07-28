@@ -54,7 +54,7 @@ export default {
     frontend () {
       this.selectedList = ['nuxt', 'vue', 'angular', 'react', 'html',
         'js', 'ts', 'sass', 'css', 'bootstrap',
-        'vuetify', 'tailwind', 'jQuery']
+        'vuetify', 'tailwind', 'jquery']
       this.list = [...new Set([...this.selectedList, ...this.list])]
     },
     backend () {
