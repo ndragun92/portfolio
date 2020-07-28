@@ -103,7 +103,7 @@ input {
         margin-bottom: 20px;
         border-radius: var(--radius);
         background-color: var(--light-secondary-color);
-        color: var(--dark-text-primary-color);
+        color: var(--dark-text-primary-color);;
         &::placeholder {
           color: var(--dark-text-secondary-color);
         }
@@ -123,7 +123,7 @@ input {
         }
       }
       &-send {
-        border: none;
+        border: 1px solid var(--dark-border-primary-color);
         cursor: pointer;
         position: relative;
         display: flex;
@@ -133,8 +133,8 @@ input {
         height: 40px;
         background-color: var(--dark-primary-color);
         color: var(--light-text-primary-color);
-        border: 1px solid var(--dark-border-primary-color);
         border-radius: var(--radius);
+        box-shadow: var(--box-shadow-box);
         &__text {
           text-transform: uppercase;
           font-size: 14px;
