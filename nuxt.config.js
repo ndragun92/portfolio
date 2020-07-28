@@ -74,7 +74,9 @@ export default {
     // Doc: https://www.npmjs.com/package/@nuxtjs/style-resources
     '@nuxtjs/style-resources',
     // Doc: https://www.npmjs.com/package/nuxt-webfontloader
-    'nuxt-webfontloader'
+    'nuxt-webfontloader',
+    // Doc: https://www.npmjs.com/package/nuxt-user-agent
+    'nuxt-user-agent'
   ],
   webfontloader: {
     google: {
