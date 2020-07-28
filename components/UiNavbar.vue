@@ -27,15 +27,30 @@
           <a role="button" @click="accessibilityTheme()"><i class="fas fa-universal-access" /></a>
         </li>
         <li class="ui-navbar__link--hamburger">
-          <a role="button" @click="toggleMenu()"><i class="fas fa-bars" /></a>
+          <a role="button" :class="{active: showMobileMenu}" @click.stop="toggleMenu()"><i class="fas fa-bars" /></a>
         </li>
       </ul>
+    </div>
+    <div v-click-outside="onCloseMobileMenu" class="ui-navbar__mobile" :class="{ active: showMobileMenu }">
+      <div>
+        <ul class="ui-navbar__links">
+          <li v-for="link in links" :key="link.href">
+            <nuxt-link class="ui-navbar__link" :to="link.href" :class="{'ui-navbar__link--bordered': link.bordered}">
+              <i v-if="link.icon" :class="[link.icon]" />{{ link.name }}
+            </nuxt-link>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 </template>
 
 <script>
+import clickOutside from '~/directives/clickOutside'
 export default {
+  directives: {
+    clickOutside
+  },
   data: () => ({
     links: [
       {
@@ -56,7 +71,8 @@ export default {
         href: '/contact',
         bordered: true
       }
-    ]
+    ],
+    showMobileMenu: false
   }),
   computed: {
     themeToChose () {
@@ -64,6 +80,13 @@ export default {
     },
     themeToDelete () {
       return this.$store.state.theme.palette !== 'light' ? 'dark' : 'light'
+    }
+  },
+  watch: {
+    '$route.path': {
+      handler () {
+        this.onCloseMobileMenu()
+      }
     }
   },
   async mounted () {
@@ -87,14 +110,18 @@ export default {
       document.documentElement.classList.add('theme-accessibility')
     },
     toggleMenu () {
+      this.showMobileMenu = !this.showMobileMenu
       console.log('toggle menu')
+    },
+    onCloseMobileMenu () {
+      this.showMobileMenu = false
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-  .ui-navbar {;
+  .ui-navbar {
     top: 0;
     position: absolute;
     width: 100%;
@@ -185,6 +212,11 @@ export default {
       &--hamburger {
         display: none !important;
         margin-right: 0 !important;
+        a {
+          &.active {
+            color: var(--active-color-primary);
+          }
+        }
         i {
           margin: 0 !important;
         }
@@ -193,6 +225,38 @@ export default {
         }
       }
     }
-
+    &__mobile {
+      display: none;
+      height: 100vh;
+      overflow-y: auto;
+      position: fixed;
+      width: calc(100% - 55px);
+      max-width: 320px;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      background-color: rgba(var(--dark-primary-color-rgb), 0.9);
+      z-index: $z_index-dropdown-navbar;
+      transform: translateX(-100%);
+      transition: transform var(--transition);
+      @include upToSmallDesktop {
+        display: block;
+      }
+      &.active {
+        transform: translateX(0);
+      }
+      .ui-navbar__links{
+        display: flex !important;
+        flex-direction: column !important;
+        padding: 40px !important;
+        li {
+          margin: 10px 0;
+        }
+      }
+      .ui-navbar__link {
+        display: inline-block !important;
+        color: var(--light-text-primary-color) !important;
+      }
+    }
   }
 </style>
