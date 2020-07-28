@@ -62,18 +62,18 @@
 .theme-accessibility {
   --dark-primary-color: #000000;
   --dark-primary-color-rgb: 0, 0, 0;
-  --dark-secondary-color: #111111;
+  --dark-secondary-color: #040404;
   --dark-secondary-color-rgb: 17, 17, 17;
   --light-primary-color: #000000;
   --light-primary-color-rgb: 0, 0, 0;
-  --light-secondary-color: #111;
+  --light-secondary-color: #040404;
   --light-secondary-color-rgb: 17, 17, 17;
   --dark-text-primary-color: #ffff00;
   --dark-text-secondary-color: #ffff00;
   --light-text-primary-color: #ffff00;
   --light-text-secondary-color: #ffff00;
   --dark-border-primary-color: #fff;
-  --light-border-secondary-color: #111;
+  --light-border-secondary-color: #040404;
   --active-color-primary: #ffff00;
   --active-color-primary-rgb: 255, 255, 0;
   --active-color-secondary: #ffff00;
@@ -82,4 +82,5 @@
   --success-color-rgb: 255, 255, 0;
   --always-text-light-primary: #ffff00;
   --always-dark-text-primary: #000;
+  --always-dark-primary: #000;
 }
