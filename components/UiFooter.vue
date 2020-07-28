@@ -6,6 +6,7 @@
 
 <style lang="scss" scoped>
   footer {
+    min-height: 55px;
     font-size: 12px;
     text-align: center;
     background-color: var(--always-dark-primary);
