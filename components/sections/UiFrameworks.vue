@@ -47,7 +47,7 @@ export default {
   computed: {
     returnBorderColor () {
       const { length } = this.selectedList
-      if (length === 13) { return '#1eb41e' } else if (length === 9) { return '#c814c8' } else if (length === 6) { return '#7d7d7d' } else { return 'transparent' }
+      if (length === 13) { return '#01c888' } else if (length === 9) { return '#220051' } else if (length === 6) { return '#f05134' } else { return 'transparent' }
     }
   },
   methods: {
@@ -104,7 +104,7 @@ export default {
         color: var(--dark-text-primary-color);
         transition: background-color var(--transition) linear;
         &:hover {
-          color: var(--light-text-primary-color);
+          color: var(--always-text-light-primary);
           transition: none;
           -webkit-mask-image: linear-gradient(-75deg,rgba(0,0,0,.6) 30%,#000 50%,rgba(0,0,0,.6) 70%);
           -webkit-mask-size: 200%;
@@ -121,7 +121,7 @@ export default {
           }
         }
         &.active {
-          color: var(--light-text-primary-color);
+          color: var(--always-text-light-primary);
         }
         &:first-child {
           margin-left: 0;
@@ -130,21 +130,21 @@ export default {
           margin-right: 0;
         }
         &:nth-child(1) {
-          border: 2px solid #1eb41e;
+          border: 2px solid #01c888;
           &:hover, &.active {
-            background-color: #1eb41e;
+            background-color: #01c888;
           }
         }
         &:nth-child(2) {
-          border: 2px solid #c814c8;
+          border: 2px solid #220051;
           &:hover, &.active {
-            background-color: #c814c8;
+            background-color: #220051;
           }
         }
         &:nth-child(3) {
-          border: 2px solid #7d7d7d;
+          border: 2px solid #f05134;
           &:hover, &.active {
-            background-color: #7d7d7d;
+            background-color: #f05134;
           }
         }
       }
