@@ -69,7 +69,7 @@
     }
     &:before {
       content: '';
-      background-image: url("~static/images/sections/hero3.svg");
+      background-image: url("~static/images/sections/hero.svg");
       background-repeat: no-repeat;
       background-size: auto;
       background-position: bottom center;

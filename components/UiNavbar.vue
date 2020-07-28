@@ -1,10 +1,7 @@
 <template>
   <nav class="ui-navbar">
     <div
-      class="g-container ui-navbar__container"
-      :class="{
-        'ui-navbar__container--transparent': $route.name === 'index'
-      }"
+      class="g-container ui-navbar__container ui-navbar__container--transparent"
     >
       <div class="ui-navbar__logo" @click="$router.push('/')">
         <img src="~static/images/avatar.png" alt="">
