@@ -1,5 +1,5 @@
 <template>
-  <section class="ui-work-as-developer">
+  <section id="ui-work-as-developer" class="ui-work-as-developer">
     <div class="g-container">
       <h2 class="h2">
         Why do i love to work as developer?

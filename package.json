@@ -22,7 +22,8 @@
     "nuxt": "^2.14.0",
     "nuxt-user-agent": "^1.2.2",
     "nuxt-webfontloader": "^1.1.0",
-    "particles.js": "^2.0.0"
+    "particles.js": "^2.0.0",
+    "vue-scrollto": "^2.18.1"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^3.1.0",

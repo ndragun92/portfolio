@@ -76,7 +76,9 @@ export default {
     // Doc: https://www.npmjs.com/package/nuxt-webfontloader
     'nuxt-webfontloader',
     // Doc: https://www.npmjs.com/package/nuxt-user-agent
-    'nuxt-user-agent'
+    'nuxt-user-agent',
+    // Doc: https://www.npmjs.com/package/vue-scrollto
+    'vue-scrollto/nuxt'
   ],
   webfontloader: {
     google: {

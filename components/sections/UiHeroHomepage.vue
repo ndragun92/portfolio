@@ -1,8 +1,8 @@
 <template>
-  <div class="ui-hero">
+  <div class="ui-hero-homepage">
     <client-only>
       <ui-particles
-        class="ui-hero__particles"
+        class="ui-hero-homepage__particles"
         color="#27293d"
         :particles-number="100"
         shape-type="polygon"
@@ -13,12 +13,12 @@
         :move-speed="0.75"
       />
     </client-only>
-    <div class="ui-hero__me">
-      <div class="ui-hero__line" />
+    <div class="ui-hero-homepage__me">
+      <div class="ui-hero-homepage__line" />
       <h1>I'm <strong>Nemanja Dragun</strong></h1>
       <h6>Full-stack <strong>Web Developer</strong></h6>
     </div>
-    <div class="g-container ui-hero__bottom-bar">
+    <div class="g-container ui-hero-homepage__bottom-bar">
       <div>
         <a href="https://facebook.com">
           <i class="fab fa-facebook-f" />
@@ -36,7 +36,7 @@
           <i class="fab fa-skype" />
         </a>
       </div>
-      <div>
+      <div v-scroll-to="'#ui-work-as-developer'">
         <span><i class="fas fa-mouse" /></span>
         <div>
           Scroll down
@@ -50,7 +50,7 @@
 </template>
 
 <style lang="scss" scoped>
-  .ui-hero {
+  .ui-hero-homepage {
     position: relative;
     background-color: var(--always-dark-primary);
     color: var(--always-text-light-primary);
