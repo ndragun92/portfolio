@@ -38,7 +38,7 @@ const defaultList = ['nuxt', 'adonis', 'git', 'vue', 'feathers',
   'node', 'figma', 'html', 'php', 'intellij',
   'js', 'mysql', 'heroku', 'ts', 'mongodb',
   'sass', 'css', 'bootstrap', 'mssql', 'vuetify',
-  'restapi', 'tailwind', 'jQuery']
+  'restapi', 'tailwind', 'jquery']
 export default {
   data: () => ({
     list: defaultList,
