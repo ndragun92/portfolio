@@ -1,3 +1,5 @@
+import { project } from './config/project.js'
+
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
     base: '/portfolio/'
@@ -25,14 +27,18 @@ export default {
   ** See https://nuxtjs.org/api/configuration-head
   */
   head: {
-    title: process.env.npm_package_name || '',
+    title: project.name,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' }
+      {
+        hid: 'description',
+        name: 'description',
+        content: project.description
+      }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: 'favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: project.favicon }
     ]
   },
   /*
@@ -54,6 +60,15 @@ export default {
   ** See https://nuxtjs.org/api/configuration-components
   */
   components: true,
+
+  manifest: {
+    title: project.name,
+    name: project.name,
+    description: project.description,
+    lang: project.lang,
+    theme_color: project.themeColor
+  },
+
   /*
   ** Nuxt.js dev-modules
   */
