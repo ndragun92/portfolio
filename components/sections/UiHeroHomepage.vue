@@ -196,13 +196,22 @@
         }
         &:nth-child(2) {
           grid-area: scrollDown;
+          cursor: pointer;
           justify-self: center;
           text-align: center;
           @include upToSmallDesktop {
             justify-self: center;
           }
+          &:hover {
+            i {
+              top: -10px;
+            }
+          }
           i {
+            position: relative;
+            top: 0;
             font-size: 18px;
+            transition: top var(--transition);
           }
           & > div {
             margin-top: 10px;
