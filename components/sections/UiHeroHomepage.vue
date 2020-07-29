@@ -60,6 +60,7 @@
     align-items: center;
     justify-content: center;
     clip-path: polygon(100% 0%, 100% 90%, 50% 98%, 50% 98%, 0 90%, 0 0);
+    user-select: none;
     @media (max-height: 650px) {
       height: 100vh;
     }

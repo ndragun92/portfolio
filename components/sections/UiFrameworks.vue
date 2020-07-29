@@ -78,6 +78,7 @@ export default {
     background-color: var(--light-secondary-color);
     clip-path: polygon(0% 100%, 0% 10%, 50% 0%, 100% 10%, 100% 100%);
     min-height: 500px;
+    user-select: none;
     @include upToTablet {
       padding-top: 80px;
       padding-bottom: 40px;

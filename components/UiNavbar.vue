@@ -182,7 +182,7 @@ export default {
       @include upToSmallDesktop {
         display: none;
       }
-      &:hover {
+      &:hover, &.nuxt-link-exact-active {
         -webkit-mask-image: linear-gradient(-75deg,rgba(0,0,0,.6) 30%,#000 50%,rgba(0,0,0,.6) 70%);
         -webkit-mask-size: 200%;
         -webkit-animation: shine-data 2s infinite;
