@@ -214,26 +214,4 @@ input {
       }
     }
   }
-  #lnch {
-    font-size: 18px;
-    color: #fff;
-    line-height: 1;
-    padding: 20px 25px;
-    text-align: center;
-    border-radius: 50px;
-    transition: 0.5s ease background-color, 0.5s ease box-shadow;
-    background: #e74c3c;
-    box-shadow: 0 20px 30px -6px #e74c3c;
-  }
-  #lnch_btn {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 20px;
-    line-height: 1;
-    color: #fff;
-    padding: 18px 12px;
-    cursor: pointer;
-    transition: 0.3s ease transform;
-  }
 </style>

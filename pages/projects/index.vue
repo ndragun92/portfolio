@@ -1,8 +1,6 @@
 <template>
   <div>
     <ui-hero title="Projects" />
-    <div style="height: 600px">
-      Recent projects
-    </div>
+    <ui-projects />
   </div>
 </template>
