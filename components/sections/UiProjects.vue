@@ -29,10 +29,9 @@
 export default {
   async fetch () {
     this.projects = await this.$content('projects').fetch()
-    console.log('test', this.projects)
   },
   data: () => ({
-    projects: null
+    projects: []
   })
 }
 </script>
