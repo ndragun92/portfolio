@@ -58,6 +58,9 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
+    @include upToMobile {
+      height: 350px;
+    }
     &:before {
       content: '';
       background-repeat: no-repeat;

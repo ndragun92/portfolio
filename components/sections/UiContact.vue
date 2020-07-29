@@ -92,6 +92,7 @@ input {
     }
     @include upToMobile {
       padding: 40px 20px;
+      min-height: calc(100vh - 405px);
     }
     &__form {
       width: 100%;

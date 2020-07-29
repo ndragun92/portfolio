@@ -108,7 +108,6 @@ export default {
     },
     toggleMenu () {
       this.showMobileMenu = !this.showMobileMenu
-      console.log('toggle menu')
     },
     onCloseMobileMenu () {
       this.showMobileMenu = false
