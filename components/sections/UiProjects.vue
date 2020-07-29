@@ -60,11 +60,9 @@ export default {
       @include upToTablet {
         grid-template-columns: repeat(2, 1fr);
       }
-      @include upToMobile {
-        grid-gap: 10px;
-      }
-      @include smallMobile {
+      @include upToMediumMobile {
         grid-template-columns: repeat(1, 1fr);
+        grid-gap: 10px;
       }
     }
     &__card {
