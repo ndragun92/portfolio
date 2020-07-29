@@ -10,9 +10,11 @@
   --dark-text-primary-color: #0f0e1a;
   --dark-text-primary-color-rgb: 245, 45, 10;
   --dark-text-secondary-color: #71717a;
+  --dark-text-secondary-color-fixed: #71717a;
   --light-text-primary-color: #ffffff;
   --light-text-secondary-color: #b1b1b5;
   --dark-border-primary-color: #424351;
+  --dark-border-primary-color-fixed: #424351;
   --light-border-secondary-color: #e1e2e6;
   --active-color-primary: #d9ac6c;
   --active-color-primary-rgb: 35, 50, 85;
@@ -33,7 +35,9 @@
   --always-light-primary: #ffffff;
   --always-text-light-primary: #ffffff;
   --always-dark-primary: #0f0e1a;
+  --always-dark-secondary: #27293d;
   --always-dark-text-primary: #0f0e1a;
+  //--always-dark-text-primary: #ffffff;
 }
 
 .theme-dark {

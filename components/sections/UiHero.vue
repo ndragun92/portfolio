@@ -6,6 +6,7 @@
     <client-only>
       <ui-particles
         class="ui-hero__particles"
+        :class="{ 'ui-hero__particles--fullscreen': particlesFullscreen }"
         color="#27293d"
         :particles-number="100"
         shape-type="polygon"
@@ -31,6 +32,10 @@ export default {
     title: {
       type: String,
       default: ''
+    },
+    particlesFullscreen: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -89,6 +94,10 @@ export default {
       bottom: 0;
       left: 0;
       pointer-events: none;
+      &--fullscreen {
+        position: fixed;
+        z-index: 1;
+      }
     }
     &__line {
       margin: 0 auto 10px auto;

@@ -85,6 +85,8 @@ input {
     align-items: center;
     padding: 40px;
     min-height: calc(100vh - 555px);
+    background-color: var(--always-dark-primary);
+    color: var(--always-text-light-primary);
     @include upToTablet {
       padding: 40px 30px;
     }
@@ -98,14 +100,20 @@ input {
       display: flex;
       flex-direction: column;
       input, textarea {
+        position: relative;
+        z-index: 1;
         font-size: 14px;
-        border: 1px solid var(--light-border-secondary-color);
+        border: 1px solid var(--dark-border-primary-color-fixed);
         margin-bottom: 20px;
         border-radius: var(--radius);
-        background-color: var(--light-secondary-color);
-        color: var(--dark-text-primary-color);;
+        background-color: var(--always-dark-primary);
+        color: var(--always-text-light-primary);;
+        transition: border var(--transition) linear;
         &::placeholder {
-          color: var(--dark-text-secondary-color);
+          color: var(--dark-text-secondary-color-fixed);
+        }
+        &:focus {
+          border-color: var(--active-color-primary);
         }
       }
       input {
@@ -123,7 +131,7 @@ input {
         }
       }
       &-send {
-        border: 1px solid var(--dark-border-primary-color);
+        border: none;
         cursor: pointer;
         position: relative;
         display: flex;
@@ -131,10 +139,15 @@ input {
         justify-content: center;
         padding: 0 20px;
         height: 40px;
-        background-color: var(--dark-primary-color);
-        color: var(--light-text-primary-color);
+        background-color: var(--active-color-primary);
+        color: var(--always-dark-text-primary);
         border-radius: var(--radius);
         box-shadow: var(--box-shadow-box);
+        transition: background-color var(--transition) linear;
+        &:hover {
+          background-color: var(--always-dark-secondary);
+          color: var(--always-text-light-primary);
+        }
         &__text {
           text-transform: uppercase;
           font-size: 14px;
