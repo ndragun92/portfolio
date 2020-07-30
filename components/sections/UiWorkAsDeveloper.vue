@@ -26,36 +26,22 @@ export default {
     list: [
       {
         name: 'Ability to learn',
-        description: 'Thing that I love about this job is that I am learning something new everyday.\n' +
-            '      Each day I meet new problems which I have to solve.\n' +
-            '      Each day brings something new, something exciting.\n' +
-            '      Working as developer is my passion. I love to spend time coding and reading articles!',
-        icon: 'fas fa-gift'
+        description: 'The thing I love about this job is that I am learning something new every day. Each day I meet new obstacles I love to solve. Each day brings me something new and exciting. Working as a developer is my passion. I love to spend time coding and reading articles.',
+        icon: 'fas fa-book'
       },
       {
-        name: 'Work place',
-        description: 'It is totally up to me! I can work on projects alone if I want that or I can\n' +
-            '      be part of something bigger. I have opportunity to meet a lot of great people,\n' +
-            '      great developers. Being a part of something bigger is more challenging but I can get only\n' +
-            '      benefits from that, I will grow faster, learn more, share my own experience with others!',
+        name: 'Workplace',
+        description: 'It\'s nice to have the opportunity to work fully/partly remotely or from the Office. I love the combination. Often working from home gives me more focus and perks to organize my day while working from Office brings closer teamwork.',
         icon: 'fas fa-home'
       },
       {
-        name: 'Work remotely or from office',
-        description: 'In this job you have opportunity to work fully/partly remote or even from office.\n' +
-          '      If you feel like you are more productive from working in office you can do that as well!\n' +
-          '      I personally like to organize my own day. I am more productive when I work from home.\n' +
-          '      I always give my best! Also once I am done with work i don\'t have to drive from office to home and lose that time on road.\n' +
-          '      I rather spend that time with my family.',
-        icon: 'fas fa-globe'
+        name: 'Team player and individual',
+        description: 'I am comfortable working on projects alone, or as a part of a bigger team. It\'s nice to have the opportunity to meet a lot of great people, great developers. Being a part of a team has its challenges but I\'m loving the benefits of growing faster, learning more, and sharing my own experience with others!',
+        icon: 'fas fa-user-friends'
       },
       {
         name: 'How am I trying to stay successful?',
-        description: 'In order to be successful I am giving my best in everything that I do!\n' +
-          '      In this job I have to be up to date with everything.\n' +
-          '      Things that I code today might be outdated tomorrow.\n' +
-          '      Community is growing, a lot of new things shows up on daily basis.\n' +
-          '      By reading articles and learning new stuff I can improve my skills and make my code even better!',
+        description: 'In order to be successful I am giving my best in everything that I do! In this job I have to be up to date with everything. Things that I code today might be outdated tomorrow. Community is growing, a lot of new things shows up on daily basis. By reading articles and learning new stuff I can improve my skills and make my code even better!',
         icon: 'fas fa-trophy'
       }
     ]
