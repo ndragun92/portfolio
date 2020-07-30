@@ -35,6 +35,26 @@ export default {
         hid: 'description',
         name: 'description',
         content: project.description
+      },
+      {
+        hid: 'og:og:title',
+        name: 'og:og:title',
+        content: project.name
+      },
+      {
+        hid: 'og:description',
+        name: 'og:description',
+        content: project.description
+      },
+      {
+        hid: 'og:url',
+        name: 'og:url',
+        content: project.url
+      },
+      {
+        hid: 'og:image',
+        name: 'og:image',
+        content: project.socialShareImage
       }
     ],
     link: [

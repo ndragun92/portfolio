@@ -1,6 +1,7 @@
 const project = {
   name: 'Nemanja Dragun',
   description: 'Nemanja Dragun - Full-Stack Web Developer',
+  url: 'https://ndragun92.github.io/portfolio/',
   // Nuxt Config
   lang: 'en',
   favicon: 'favicon.png', // 228x228
