@@ -20,19 +20,19 @@
     </div>
     <div class="g-container ui-hero-homepage__bottom-bar">
       <div>
-        <a href="https://facebook.com">
+        <a href="https://www.facebook.com/nemanna.dragun.3" target="_blank">
           <i class="fab fa-facebook-f" />
         </a>
-        <a href="https://facebook.com">
+        <a href="https://twitter.com/nemanjadragun" target="_blank">
           <i class="fab fa-twitter" />
         </a>
-        <a href="https://facebook.com">
+        <a href="https://www.linkedin.com/in/nemanja-dragun/" target="_blank">
           <i class="fab fa-linkedin-in" />
         </a>
-        <a href="https://facebook.com">
+        <a href="https://discord.gg/mBqdz2a" target="_blank">
           <i class="fab fa-discord" />
         </a>
-        <a href="https://facebook.com">
+        <a href="skype:live:nemanjadragun?chat" target="_blank">
           <i class="fab fa-skype" />
         </a>
       </div>
@@ -43,7 +43,7 @@
         </div>
       </div>
       <div>
-        <span><i class="fab fa-github" /> <a href="https://github.com/ndragun92" target="_blank">github.com/ndragun92</a></span>
+        <span><i class="fab fa-github" /><a href="https://github.com/ndragun92" target="_blank">github.com/ndragun92</a></span>
       </div>
     </div>
   </div>

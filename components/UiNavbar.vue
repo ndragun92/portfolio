@@ -59,10 +59,10 @@ export default {
         name: 'Projects',
         href: '/projects'
       },
-      {
-        name: 'Tutorials',
-        href: '/tutorials'
-      },
+      // {
+      //   name: 'Tutorials',
+      //   href: '/tutorials'
+      // },
       {
         name: 'Contact me',
         href: '/contact',
