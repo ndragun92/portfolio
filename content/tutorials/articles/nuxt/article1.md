@@ -16,7 +16,7 @@ title: Home
 
 ## Links
 
-<nuxt-link to="/articles">Nuxt Link to Blog</nuxt-link>
+<nuxt-link to="/tutorials">Nuxt Link to Blog</nuxt-link>
 
 <a href="/">Html Link to Homepage</a>
 
