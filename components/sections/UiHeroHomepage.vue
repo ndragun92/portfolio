@@ -20,7 +20,7 @@
     </div>
     <div class="g-container ui-hero-homepage__bottom-bar">
       <div>
-        <a href="https://www.facebook.com/nemanna.dragun.3" target="_blank">
+        <a href="https://www.facebook.com/Nemanja-Dragun-Web-Developer-115450890258939/" target="_blank">
           <i class="fab fa-facebook-f" />
         </a>
         <a href="https://twitter.com/nemanjadragun" target="_blank">
