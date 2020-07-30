@@ -7,17 +7,22 @@
           :key="index"
           class="ui-projects__card"
         >
-          <img :src="`images/screenshots/${project.screenshot}.jpg`" alt="">
-          <div class="ui-projects__card-box">
-            <div class="ui-projects__card-box__name">
-              {{ project.title }}
+          <div class="ui-projects__card-inner">
+            <img :src="`images/screenshots/${project.screenshot}.jpg`" alt="">
+            <div class="ui-projects__card-box">
+              <a :href="project.link" target="_blank" class="ui-projects__card-box__name">
+                <i class="fas fa-globe" />Visit website
+              </a>
+              <div class="ui-projects__card-box__tech">
+                <img v-for="tech in project.tech" :key="`${tech.image}_${index}`" :src="`images/frameworks/${tech.image}.jpg`" :alt="tech.name">
+              </div>
+              <a :href="project.repo" target="_blank" class="ui-projects__card-box__repo">
+                <i class="fab fa-github" />Go to github repo
+              </a>
             </div>
-            <div class="ui-projects__card-box__tech">
-              <img v-for="tech in project.tech" :key="`${tech.image}_${index}`" :src="`images/frameworks/${tech.image}.jpg`" :alt="tech.name">
-            </div>
-            <a :href="project.repo" target="_blank" class="ui-projects__card-box__repo">
-              <i class="fab fa-github" />Go to github repo
-            </a>
+          </div>
+          <div class="ui-projects__card-title">
+            {{ project.title }}
           </div>
         </div>
       </div>
@@ -38,19 +43,17 @@ export default {
 
 <style lang="scss" scoped>
   .ui-projects {
-    padding: 40px;
+    padding: 40px 0 60px 0;
     min-height: calc(100vh - 555px);
     background-color: var(--light-primary-color);
     color: var(--dark-text-primary-color);
     user-select: none;
-    @include upToTablet {
-      padding: 40px 30px;
-    }
     @include upToMobile {
-      padding: 40px 20px;
       min-height: calc(100vh - 405px);
     }
     &__cards {
+      position: relative;
+      z-index: 2;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       grid-gap: 20px;
@@ -63,16 +66,39 @@ export default {
       @include upToMediumMobile {
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 10px;
+        padding: 0 40px;
+      }
+      @include smallMobile {
+        padding: 0 20px;
       }
     }
     &__card {
-      position: relative;
-      border-radius: var(--radius);
-      overflow: hidden;
-      &:hover {
-        .ui-projects__card-box {
-          transform: translateY(0);
+      display: grid;
+      &-inner {
+        position: relative;
+        border-radius: var(--radius) var(--radius) 0 0;
+        border: 1px solid var(--dark-border-primary-color-fixed);
+        border-bottom: none;
+        overflow: hidden;
+        &:hover {
+          .ui-projects__card-box {
+            transform: translateY(0);
+          }
         }
+      }
+      &-title {
+        border: 1px solid var(--dark-border-primary-color-fixed);
+        border-top: none;
+        text-align: center;
+        background-color: var(--always-dark-primary);
+        color: var(--always-text-light-primary);
+        padding: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        border-radius: 0 0 var(--radius) var(--radius);
+        font-size: 12px;
+        text-transform: uppercase;
       }
       img {
         display: block;
@@ -105,7 +131,15 @@ export default {
           text-align: center;
           font-size: 12px;
           text-transform: uppercase;
+          text-decoration: none;
           transition: var(--transition) linear;
+          &:hover {
+            transition: none;
+            color: var(--always-text-light-primary);
+          }
+          i {
+            margin-right: 5px;
+          }
         }
         &__tech {
           padding: 10px;

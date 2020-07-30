@@ -80,11 +80,13 @@ export default {
       }
     }
     &--tutorials {
+      clip-path: polygon(100% 0%, 100% 90%, 50% 98%, 50% 98%, 0 90%, 0 0);
       &:before {
         background-image: url("~static/images/sections/tutorials.svg");
       }
     }
     &--projects {
+      clip-path: polygon(100% 0%, 100% 90%, 50% 98%, 50% 98%, 0 90%, 0 0);
       &:before {
         background-image: url("~static/images/sections/projects.svg");
       }
