@@ -40,7 +40,6 @@ import UiParticles from '@/components/UiParticles'
 
 export default {
   components: { UiParticles },
-  layout: 'clean',
   data: () => ({
     browsersList: [
       {
@@ -69,7 +68,11 @@ export default {
         icon: 'fab fa-edge'
       }
     ]
-  })
+  }),
+  head: () => ({
+    titleTemplate: '%s - Outdated'
+  }),
+  layout: 'clean'
 }
 </script>
 

@@ -29,6 +29,11 @@ export default {
     returnCategory () {
       return this.$route.params.category
     }
+  },
+  head () {
+    return {
+      titleTemplate: `%s - ${this.returnCategory.toUpperCase()}`
+    }
   }
 }
 </script>
