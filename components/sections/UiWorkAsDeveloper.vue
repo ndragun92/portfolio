@@ -25,12 +25,11 @@ export default {
   data: () => ({
     list: [
       {
-        name: 'Be rewarded',
+        name: 'Ability to learn',
         description: 'Thing that I love about this job is that I am learning something new everyday.\n' +
             '      Each day I meet new problems which I have to solve.\n' +
             '      Each day brings something new, something exciting.\n' +
-            '      Working as developer is my passion. I love to spend time coding and reading articles!\n' +
-            '      In the end all the effort that I put working is already or will be rewarded!',
+            '      Working as developer is my passion. I love to spend time coding and reading articles!',
         icon: 'fas fa-gift'
       },
       {
@@ -54,7 +53,7 @@ export default {
         name: 'How am I trying to stay successful?',
         description: 'In order to be successful I am giving my best in everything that I do!\n' +
           '      In this job I have to be up to date with everything.\n' +
-          '      Things that I am using/coding today might be different tomorrow.\n' +
+          '      Things that I code today might be outdated tomorrow.\n' +
           '      Community is growing, a lot of new things shows up on daily basis.\n' +
           '      By reading articles and learning new stuff I can improve my skills and make my code even better!',
         icon: 'fas fa-trophy'

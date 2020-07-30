@@ -4,9 +4,7 @@
     <section class="ui-tutorials">
       <div class="g-container">
         Tutorials article
-        <pre>
-          {{ article }}
-        </pre>
+        <nuxt-content :document="article" />
       </div>
     </section>
   </div>
