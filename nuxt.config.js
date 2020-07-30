@@ -54,7 +54,7 @@ export default {
       {
         hid: 'og:image',
         name: 'og:image',
-        content: project.socialShareImage
+        content: project.ogImage
       }
     ],
     link: [

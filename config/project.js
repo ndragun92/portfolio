@@ -6,6 +6,7 @@ const project = {
   lang: 'en',
   favicon: 'favicon.png', // 228x228
   socialShareImage: 'favicon.png',
+  ogImage: 'https://ndragun92.github.io/portfolio/favicon.png',
   themeColor: '#0f0e1a'
 }
 
