@@ -16,23 +16,25 @@
     <div class="ui-hero-homepage__me">
       <div class="ui-hero-homepage__line" />
       <h1>I'm <strong>Nemanja Dragun</strong></h1>
-      <h6>Full-stack <strong>Web Developer</strong></h6>
+      <div class="ui-hero-homepage__role">
+        Full-stack <strong>Web Developer</strong>
+      </div>
     </div>
     <div class="g-container ui-hero-homepage__bottom-bar">
       <div>
-        <a href="https://www.facebook.com/Nemanja-Dragun-Web-Developer-115450890258939/" target="_blank">
+        <a title="Facebook" rel="noreferrer" href="https://www.facebook.com/Nemanja-Dragun-Web-Developer-115450890258939/" target="_blank">
           <i class="fab fa-facebook-f" />
         </a>
-        <a href="https://twitter.com/nemanjadragun" target="_blank">
+        <a title="Twitter" rel="noreferrer" href="https://twitter.com/nemanjadragun" target="_blank">
           <i class="fab fa-twitter" />
         </a>
-        <a href="https://www.linkedin.com/in/nemanja-dragun/" target="_blank">
+        <a title="LinkedIn" rel="noreferrer" href="https://www.linkedin.com/in/nemanja-dragun/" target="_blank">
           <i class="fab fa-linkedin-in" />
         </a>
-        <a href="https://discord.gg/mBqdz2a" target="_blank">
+        <a title="Discord" rel="noreferrer" href="https://discord.gg/mBqdz2a" target="_blank">
           <i class="fab fa-discord" />
         </a>
-        <a href="skype:live:nemanjadragun?chat" target="_blank">
+        <a title="Skype" rel="noreferrer" href="skype:live:nemanjadragun?chat" target="_blank">
           <i class="fab fa-skype" />
         </a>
       </div>
@@ -43,7 +45,7 @@
         </div>
       </div>
       <div>
-        <span><i class="fab fa-github" /><a href="https://github.com/ndragun92" target="_blank">github.com/ndragun92</a></span>
+        <span><i class="fab fa-github" /><a title="Github" rel="noreferrer" href="https://github.com/ndragun92" target="_blank">github.com/ndragun92</a></span>
       </div>
     </div>
   </div>
@@ -121,16 +123,16 @@
           font-size: 24px;
         }
       }
-      h6 {
-        display: inline-block;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        margin: 0 0 0 auto;
-        font-size: 14px;
-        font-weight: 400;
-        @include smallMobile {
-          font-size: 12px;
-        }
+    }
+    &__role {
+      display: inline-block;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin: 0 0 0 auto;
+      font-size: 14px;
+      font-weight: 400;
+      @include smallMobile {
+        font-size: 12px;
       }
     }
     &__bottom-bar {

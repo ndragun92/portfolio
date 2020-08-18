@@ -4,7 +4,7 @@
       class="g-container ui-navbar__container ui-navbar__container--transparent"
     >
       <div class="ui-navbar__logo" @click="$router.push('/')">
-        <img src="~static/images/avatar.png" alt="">
+        <img src="~static/images/avatar35.png" alt="Avatar">
         <span>Nemanja <strong>Dragun</strong></span>
       </div>
       <ul class="ui-navbar__links">
@@ -14,17 +14,17 @@
           </nuxt-link>
         </li>
         <li class="ui-navbar__link--theme">
-          <a role="button" @click="toggleTheme()"><i
+          <a title="Dark/Light theme" role="button" @click="toggleTheme()"><i
             class="fas"
             :class="themeToChose === 'dark' ? 'fa-moon' :
               'fa-sun'"
           /></a>
         </li>
         <li class="ui-navbar__link--theme">
-          <a role="button" @click="accessibilityTheme()"><i class="fas fa-universal-access" /></a>
+          <a title="Accessibility theme" role="button" @click="accessibilityTheme()"><i class="fas fa-universal-access" /></a>
         </li>
         <li class="ui-navbar__link--hamburger">
-          <a role="button" :class="{active: showMobileMenu}" @click.stop="toggleMenu()"><i class="fas fa-bars" /></a>
+          <a title="Hamburger menu" role="button" :class="{active: showMobileMenu}" @click.stop="toggleMenu()"><i class="fas fa-bars" /></a>
         </li>
       </ul>
     </div>
