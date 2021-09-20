@@ -197,7 +197,11 @@ export default {
         }
       }
       &--bordered {
-        border: 1px solid var(--active-color-primary);
+        //border-left: 1px solid var(--active-color-primary);
+        //border-right: 1px solid var(--active-color-primary);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        background-color: rgba(255, 255, 255, 0.025);
+        border-radius: 3px;
       }
       &--theme {
         margin: 0 !important;

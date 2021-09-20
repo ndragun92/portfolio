@@ -13,6 +13,7 @@
         :move-speed="0.75"
       />
     </client-only>
+    <img class="ui-hero-homepage__me-float" src="/images/me.png" alt="Me">
     <div class="ui-hero-homepage__me">
       <div class="ui-hero-homepage__line" />
       <h1>I'm <strong>Nemanja Dragun</strong></h1>
@@ -78,11 +79,12 @@
       background-position: bottom center;
       opacity: 0.1;
       position: absolute;
-      z-index: $z_index-absolute;
+      //z-index: $z_index-absolute;
       top: 0;
       right: 0;
       bottom: 20px;
       left: 0;
+      z-index: -2;
     }
     &__particles {
       position: absolute;
@@ -105,6 +107,20 @@
       pointer-events: none;
       @media (max-height: 650px) {
         margin-top: -70px;
+      }
+      &-float {
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+        pointer-events: none;
+        opacity: 0.5;
+        right: 5%;
+        max-width: 100%;
+        @media (max-width: 768px) {
+          opacity: 0.35;
+          max-width: 90%;
+          right: 0;
+        }
       }
       h1 {
         text-align: center;

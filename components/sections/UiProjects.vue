@@ -78,6 +78,10 @@ export default {
         position: relative;
         border-radius: var(--radius) var(--radius) 0 0;
         border: 1px solid var(--dark-border-primary-color-fixed);
+        border-color: rgba(0, 0, 0, 0.05);
+        .theme-dark & {
+          border-color: rgba(255, 255, 255, 0.05);
+        }
         border-bottom: none;
         overflow: hidden;
         &:hover {
@@ -88,6 +92,10 @@ export default {
       }
       &-title {
         border: 1px solid var(--dark-border-primary-color-fixed);
+        border-color: rgba(0, 0, 0, 0.05);
+        .theme-dark & {
+          border-color: rgba(255, 255, 255, 0.05);
+        }
         border-top: none;
         text-align: center;
         background-color: var(--always-dark-primary);

@@ -93,7 +93,7 @@ export default {
       align-items: center;
       justify-content: center;
       font-size: 20px;
-      margin-bottom: 10px;
+      margin-bottom: 20px;
       @include smallMobile {
         font-size: 16px;
       }
@@ -132,20 +132,26 @@ export default {
         }
         &:nth-child(1) {
           border: 2px solid #01c888;
+          color: #01c888;
           &:hover, &.active {
             background-color: #01c888;
+            color: var(--dark-text-primary-color);
           }
         }
         &:nth-child(2) {
-          border: 2px solid #220051;
+          border: 2px solid #370579;
+          color: #370579;
           &:hover, &.active {
-            background-color: #220051;
+            background-color: #370579;
+            color: var(--always-light-primary);
           }
         }
         &:nth-child(3) {
           border: 2px solid #f05134;
+          color: #f05134;
           &:hover, &.active {
             background-color: #f05134;
+            color: var(--dark-text-primary-color);
           }
         }
       }
@@ -188,6 +194,7 @@ export default {
         position: relative;
         transition: all 1s;
         border: 2px solid transparent;
+        border-radius: 3px;
         span {
           position: absolute;
           top: 5px;
