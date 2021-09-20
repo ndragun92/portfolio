@@ -13,7 +13,7 @@
         :move-speed="0.75"
       />
     </client-only>
-    <img class="ui-hero-homepage__me-float" src="/images/me.png" alt="Me">
+    <img class="ui-hero-homepage__me-float" src="~static/images/me.png" alt="Me">
     <div class="ui-hero-homepage__me">
       <div class="ui-hero-homepage__line" />
       <h1>I'm <strong>Nemanja Dragun</strong></h1>
